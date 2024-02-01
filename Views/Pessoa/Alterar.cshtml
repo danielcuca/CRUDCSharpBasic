@@ -1,0 +1,30 @@
+﻿@model CRUDBasicCSharp.Models.Pessoa
+<h2>Pessoa</h2>
+<br />
+
+@using (Html.BeginForm("Atualizar", "Pessoa", FormMethod.Post, new { id = "formPessoaAlterar", name = "formPessoaAlterar" }))
+{
+    <div>
+        @Html.LabelFor(model => model.Id)
+        @Html.TextBoxFor(model => model.Id, new { @class = "form-control", @readonly = "true" });
+    </div>
+    <div>
+        @Html.LabelFor(model => model.Nome)
+        @Html.TextBoxFor(model => model.Nome);
+    </div>
+    <div>
+        @Html.LabelFor(model => model.Endereco)
+        @Html.TextBoxFor(model => model.Endereco);
+    </div>
+    <div>
+        @Html.LabelFor(model => model.Telefone)
+        @Html.TextBoxFor(model => model.Telefone);
+    </div>
+    <div>
+        @Html.LabelFor(model => model.CpfOuCnpj)
+        @Html.TextBoxFor(model => model.CpfOuCnpj);
+    </div>
+    <div>
+            <input type="submit" value="Salvar" />
+    </div>
+}
